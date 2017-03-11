@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
+import sys
 import operator
+from termcolor import colored
 
 OPERATORS = {
     '+': operator.add,
@@ -28,7 +30,10 @@ def calculate(arg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result:", result)
+        if (result < 0):
+            print("Result:", colored(result, 'red'))
+        else:
+            print("Result:", result)
 
 if __name__ == '__main__':
     main()
