@@ -1,5 +1,5 @@
 language: python
-instal:
+before_install:
   pip install coveralls
 python:
   - "3.3"
