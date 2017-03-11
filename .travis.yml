@@ -1,4 +1,8 @@
 language: python
+instal:
+  pip install coveralls
 python:
   - "3.3"
 script: make
+after_success:
+  coveralls
